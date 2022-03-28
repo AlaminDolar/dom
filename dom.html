@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="blog" class="blogs"></section>
+    <h1>This is time to come back</h1>
+    <script>
+      //add article
+      const article = document.createElement("article");
+      const h3 = document.createElement("h3");
+      h3.innerText = "MY AWESOME BLOG";
+      const p = document.createElement("p");
+      p.innerText = "Amar sonar Bangla Ami tomai Valobase";
+      article.appendChild(h3);
+      article.appendChild(p);
+
+      //parent of article
+      const parrent = document.getElementById("blog");
+      parrent.appendChild(article);
+
+      // add style
+      const blogs = document.getElementsByClassName("blogs");
+      for (const blog of blogs) {
+        blog.style.border = "2px solid orange";
+        blog.style.borderRadius = "10px";
+        blog.style.margin = "5px";
+        blog.style.padding = "5px";
+      }
+    </script>
+  </body>
+</html>
